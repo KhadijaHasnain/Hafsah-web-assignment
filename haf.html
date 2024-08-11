@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color:brown;
+            color:black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        header img, footer img {
+            height:auto;
+            width: 90px; /* Adjust logo size */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: Black;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            background-color:brown;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        .banner-home {
+            background-image: url("https://wearego.com/cdn/shop/files/Desktop_cat_banner_8e4b3e18-fb4c-4b6e-95db-eedfb19e8618.jpg?v=1710138468");
+            background-size: cover;
+            height: 500px; /* Increase banner height */
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position:relative;
+        }
+
+        .banner-home .text {
+            position: relative;
+            z-index: 1;
+            font-size: 24px;
+        }
+
+        .banner-home .link {
+            position: absolute;
+            bottom: 20px;
+            z-index: 1;
+            background-color: #555;
+            padding: 10px px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .banner-home .link:hover {
+            background-color: #777;
+        }
+
+        #latest-products {
+            margin:0;
+            padding: 20px;
+        }
+
+        #latest-products h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content:right;
+        }
+
+        .product {
+            text-align: center;
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-left: 20px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 500px;
+            border-radius: 4px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            margin:auto;
+        }
+
+        .product-details img {
+            width: 400px;;
+        }
+
+        .product-info {
+            width: 70%;
+            margin-left: 20px;
+        }
+
+        .product-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            margin-bottom: 10px;
+        }
+
+        .product-info table {
+            margin-bottom: 10px;
+        }
+
+        .product-info th {
+            text-align: left;
+        }
+
+        .product-info td {
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            margin-bottom: 10px;
+        }
+
+        /* Style for contact form */
+        #contact-form {
+            margin: 20px 0;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #contact-form h2 {
+            margin-bottom: 20px;
+        }
+
+        #contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form input[type="Address"],
+        #contact-form textarea,
+        #contact-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        #contact-form input[type="submit"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://wearego.com/cdn/shop/files/ego_logo_4d72c619-4078-4f5a-84cf-2c7fad18ddcd_170x.png?v=1665744985" alt="Company Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#product-details">Product Details</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner" class="banner-home">
+        </section>
+        <section id="about-us" class="hidden">
+            <h2>About Wear Ego</h2>
+            <p>Wear Ego is a leading fashion retailer that is dedicated to providing high-quality, stylish clothing for men and women. With a focus on premium materials and cutting-edge design, our products are sure to turn heads and make a statement. Our team is made up of experienced fashion industry professionals who are passionate about bringing the latest trends to our customers. We believe that fashion is a form of self-expression and we strive to offer a wide variety of styles to suit every individual's unique sense of style.</p>
+            <p>At Wear Ego, we are committed to sustainability and ethical manufacturing practices. We source our materials from responsible suppliers and ensure that our factories adhere to strict labor standards. We also believe in giving back to the community and regularly participate in charitable initiatives. </p>
+            <p>Thank you for choosing Wear Ego. We look forward to serving you and helping you look and feel your best.</p>
+        </section>
+        <section id="latest-products" class="hidden">
+            <h2>Latest Products</h2>
+            <div class="product-container">
+                <div class="product">
+                    <a href="#product-details"><img src="https://wearego.com/cdn/shop/files/S00196-BK0.jpg?v=1709803451" alt="Product 1"></a>
+                    <p>PIECE Solid | 100% Premium Cotton | Flared Cut</p>
+                    <p>Regular price Rs.12,500</p>
+                </div>
+                <div class="product">
+                    <a href="#product-details"><img src="https://wearego.com/cdn/shop/files/U00335-SB0-3.jpg?v=1707124803" alt="Product 2"></a>
+                    <p>3 PIECE Digital Print | Lawn | Chiffon Dupatta</p>
+                    <p>Regular price Rs.3,990</p>
+                </div>
+                <div class="product">
+                    <a href="#product-details"><img src="https://wearego.com/cdn/shop/files/S00196-BK0.jpg?v=1709803451" alt="Product 3"></a>
+                    <p>2 PIECE Stitch Action | 100% Premium Cotton | Straight Cut</p>
+                    <p>Regular price Rs.9,500</p>
+                </div>
+            </div>
+        </section>        
+        <section id="product-details" class="hidden"> <!-- Product Details section -->
+            <h2>Product Details</h2>
+            <div class="product-details">
+                <img src="https://wearego.com/cdn/shop/files/U00335-SB0-3.jpg?v=1707124803" alt="Product Image">
+                <div class="product-info">
+                    <h2>Product Name</h2>
+                    <p>Product Description</p>
+                    <table>
+                        <tr>
+                            <th>Product Price:</th>
+                            <td>PKR 2500</td>
+                        </tr>
+                        <tr>
+                            <th>Product Code:</th>
+                            <td>00112233</td>
+                        </tr>
+                        <tr>
+                            <th>Product In Stock:</th>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>Product Discount:</th>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <th>Available Sizes:</th>
+                            <td>Small, Medium, Large</td>
+                        </tr>
+                    </table>
+                    <h3 class="product-description">Product Details</h3>
+                    <p class="product-description">Shipping calculated at checkout.
+                        Embrace pure elegance with this unstitched with digital print
+                        Fabric : Lawn
+                        Color : Sky Blue
+                        Embellishment: Digital
+                        Lawn Shirt : 1.75 m | 60 inches wide
+                        Lawn pants 2m | 45 inches wide
+                        Chiffon printed dupatta 2.5m </p>
+                </div>
+            </div>
+        </section>
+        <section id="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone">
+                <label for="Address">Address:</label>
+                <input type="Address" id="Address" name="Address">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h3>Office Address:</h3>
+            <p>Zamzama Boulevard, DHA Phase 5, Karachi</p>
+        </div>
+        <div>
+            <h3>Phone:</h3>
+            <p>(021) 37130277</p>
+        </div>
+        <div>
+            <h3>Email:</h3>
+            <p>cs@wearego.com</p>
+        </div>
+        <div>
+            <h3>Stay Connected</h3>
+            <ul>
+                <a href="https://www.google.com/"><img src="https://image.pngaaa.com/793/670793-middle.png" alt="Stay Connected"></a>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('nav ul li a');
+
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                hideAllSections();
+                sections[index].classList.remove('hidden');
+            });
+        });
+
+        function hideAllSections() {
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
